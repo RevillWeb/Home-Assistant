@@ -70,7 +70,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     for switch in switches:
         deviceid = switch[CONF_ID]
         name = switch[CONF_NAME]
-        dflink = switch[CONF_RFLINK]
+        rflink = switch[CONF_RFLINK]
         device = LRFSwitch(name, DEFAULT_STATE, deviceid, rflink, rabbithost, rabbitport, rabbitque, rabbituname, rabbitpass)
         devices.append(device)
     
